@@ -13,7 +13,7 @@ server.listen(8081, () => {
 
 // Verify that the provider meets all consumer expectations
 describe('Pact Verification', () => {
-  it('should validate the expectations of Our Little Consumer', () => {
+  it('should validate the expectations of the Updates Consumer', () => {
     let opts = {
       provider: 'Our Provider',
       providerBaseUrl: 'http://localhost:8081',

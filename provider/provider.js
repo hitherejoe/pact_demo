@@ -11,14 +11,14 @@ server.use((_, res, next) => {
   next()
 })
 
-const RESPONSE = [{
+const RESPONSE = {
     count: 10,
     userId: 'sadfdsfadfsbfvbcv4564563',
     error: null,
     updates: [
       {id: 5, text: 'Update five', canShareDirect: false},
     ]
-  }]
+  }
 
 server.get('/updates', (req, res) => {
   res.json(RESPONSE)
