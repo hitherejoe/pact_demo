@@ -1,0 +1,12 @@
+{
+  "name": "provider",
+  "version": "1.0.0",
+  "description": "Pact test Provider",
+  "main": "provider.js",
+  "scripts": {
+    "test": "npm run pact:consumer"
+  },
+  "engines": {
+    "node": ">=4"
+  }
+}

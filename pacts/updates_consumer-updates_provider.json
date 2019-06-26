@@ -1,0 +1,59 @@
+{
+  "consumer": {
+    "name": "Updates Consumer"
+  },
+  "provider": {
+    "name": "Updates Provider"
+  },
+  "interactions": [
+    {
+      "description": "a request for JSON data",
+      "request": {
+        "method": "GET",
+        "path": "/updates"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "body": [
+          {
+            "count": 5,
+            "userId": "53474fgrbvc564w4554",
+            "error": null,
+            "updates": [
+              {
+                "id": 1,
+                "text": "Update one",
+                "canShareDirect": true
+              }
+            ]
+          }
+        ],
+        "matchingRules": {
+          "$.body[0].count": {
+            "match": "type"
+          },
+          "$.body[0].userId": {
+            "match": "type"
+          },
+          "$.body[0].updates[0].id": {
+            "match": "type"
+          },
+          "$.body[0].updates[0].text": {
+            "match": "type"
+          },
+          "$.body[0].updates[0].canShareDirect": {
+            "match": "type"
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
