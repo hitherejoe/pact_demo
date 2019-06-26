@@ -8,11 +8,7 @@ var updates = [{id: 1, text: "hello"}];
 const fetchProviderData = _ => {
   return request
     .get(`${API_ENDPOINT}/updates`)
-    .then(res => {
-        return {
-          count: updates.length,
-          data: updates,
-        }})
+    .then(res => {return res.body})
 }
 
 module.exports = {

@@ -20,14 +20,14 @@ const provider = new Pact({
   spec: 2,
 })
 
-const EXPECTED_RESPONSE = [{
+const EXPECTED_RESPONSE = {
     count: like(5),
     userId: like('53474fgrbvc564w4554'),
     error: null,
     updates: [
       {id: like(1), text: like('Update one'), canShareDirect: like(true)},
     ]
-  }]
+  }
 
 describe('Pact with Updates Provider', () => {
   describe('given data count > 0', () => {
@@ -54,7 +54,7 @@ describe('Pact with Updates Provider', () => {
       it('can process the JSON payload from the provider', () => {
         const response = fetchProviderData()
 
-        return expect(response).to.eventually.have.property('count', 1)
+        return expect(response).to.eventually.have.property('count')
       })
 
       it('should validate the interactions and create a contract', () => {

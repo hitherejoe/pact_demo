@@ -17,34 +17,32 @@
         "headers": {
           "Content-Type": "application/json; charset=utf-8"
         },
-        "body": [
-          {
-            "count": 5,
-            "userId": "53474fgrbvc564w4554",
-            "error": null,
-            "updates": [
-              {
-                "id": 1,
-                "text": "Update one",
-                "canShareDirect": true
-              }
-            ]
-          }
-        ],
+        "body": {
+          "count": 5,
+          "userId": "53474fgrbvc564w4554",
+          "error": null,
+          "updates": [
+            {
+              "id": 1,
+              "text": "Update one",
+              "canShareDirect": true
+            }
+          ]
+        },
         "matchingRules": {
-          "$.body[0].count": {
+          "$.body.count": {
             "match": "type"
           },
-          "$.body[0].userId": {
+          "$.body.userId": {
             "match": "type"
           },
-          "$.body[0].updates[0].id": {
+          "$.body.updates[0].id": {
             "match": "type"
           },
-          "$.body[0].updates[0].text": {
+          "$.body.updates[0].text": {
             "match": "type"
           },
-          "$.body[0].updates[0].canShareDirect": {
+          "$.body.updates[0].canShareDirect": {
             "match": "type"
           }
         }
